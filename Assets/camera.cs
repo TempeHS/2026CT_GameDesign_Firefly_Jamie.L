@@ -3,6 +3,8 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform player;
+
+    // These change per room
     public Transform bottomLeft;
     public Transform topRight;
 
@@ -11,7 +13,14 @@ public class CameraFollow : MonoBehaviour
 
     float minX, maxX, minY, maxY;
 
+    public bool isFrozen = false;
+
     void Start()
+    {
+        UpdateBounds();
+    }
+
+    public void UpdateBounds()
     {
         minX = bottomLeft.position.x;
         minY = bottomLeft.position.y;
@@ -21,6 +30,8 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate()
     {
+        if (isFrozen) return;
+
         Vector3 desired = player.position + offset;
 
         float clampedX = Mathf.Clamp(desired.x, minX, maxX);
