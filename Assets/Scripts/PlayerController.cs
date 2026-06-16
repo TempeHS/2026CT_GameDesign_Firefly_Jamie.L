@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
+    public static string targetSpawn = "";
+
     private float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -12,6 +14,16 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        if (targetSpawn != "")
+        {
+            GameObject spawn = GameObject.Find(targetSpawn);
+            if (spawn != null)
+            {
+                transform.position = spawn.transform.position;
+            }
+            targetSpawn = "";
+        }
     }
 
     // Update is called once per frame
@@ -35,11 +47,18 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("InputY", moveInput.y);
 
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "bath-bed")
         {
+            targetSpawn = "BedroomDoorSpawn";
             SceneManager.LoadScene("Main Bedroom");
         }
+        if (other.tag == "bed-bath")
+        {
+            targetSpawn = "BathroomDoorSpawn";
+            SceneManager.LoadScene("Bathroom");
+        }
+
     }
 }

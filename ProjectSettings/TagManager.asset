@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - bath-bed
+  - bed-bath
   layers:
   - Default
   - TransparentFX
