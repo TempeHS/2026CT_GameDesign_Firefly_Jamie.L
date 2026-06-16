@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     private float moveSpeed = 5f;
@@ -33,5 +34,12 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("InputX", moveInput.x);
         animator.SetFloat("InputY", moveInput.y);
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "bath-bed")
+        {
+            SceneManager.LoadScene("Main Bedroom");
+        }
     }
 }
