@@ -4,8 +4,13 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - bed-main
+  - bath-main
+  - main-bed
+  - main-bath
   - bath-bed
-  - bed-bath
+  - main-kitchen
+  - kitchen-main
   layers:
   - Default
   - TransparentFX

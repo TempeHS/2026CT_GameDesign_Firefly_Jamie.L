@@ -5952,7 +5952,7 @@ GameObject:
   - component: {fileID: 1577707053}
   m_Layer: 0
   m_Name: transition
-  m_TagString: bed-bath
+  m_TagString: bed-main
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

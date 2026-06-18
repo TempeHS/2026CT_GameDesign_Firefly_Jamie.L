@@ -49,16 +49,30 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "bath-bed")
+        if (other.CompareTag("main-bed"))
         {
             targetSpawn = "BedroomDoorSpawn";
             SceneManager.LoadScene("Main Bedroom");
         }
-        if (other.tag == "bed-bath")
+        else if (other.CompareTag("main-bath"))
         {
             targetSpawn = "BathroomDoorSpawn";
             SceneManager.LoadScene("Bathroom");
         }
-
+        else if (other.CompareTag("bed-main"))
+        {
+            targetSpawn = "bedtomainspawn";
+            SceneManager.LoadScene("Outside Room");
+        }
+        else if (other.CompareTag("bath-main"))
+        {
+            targetSpawn = "bathtomainspawn";
+            SceneManager.LoadScene("Outside Room");
+        }
+        else if (other.CompareTag("main-kitchen"))
+        {
+            targetSpawn = "KitchenDoorSpawn";
+            SceneManager.LoadScene("Kitchen");
+        }
     }
 }
