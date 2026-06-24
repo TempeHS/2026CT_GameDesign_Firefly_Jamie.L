@@ -11,6 +11,8 @@ TagManager:
   - bath-bed
   - main-kitchen
   - kitchen-main
+  - main-study
+  - study-main
   layers:
   - Default
   - TransparentFX

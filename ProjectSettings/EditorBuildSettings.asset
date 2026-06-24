@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kitchen.unity
     guid: 325c7bd8234bd5e4ea3829095437b15e
+  - enabled: 1
+    path: Assets/Scenes/Study.unity
+    guid: bcaa2dd288956304f8b67dc16f39f12a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
