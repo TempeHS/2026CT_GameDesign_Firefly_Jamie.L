@@ -6010,13 +6010,14 @@ GameObject:
   m_Component:
   - component: {fileID: 964568347}
   - component: {fileID: 964568348}
+  - component: {fileID: 964568349}
   m_Layer: 0
   m_Name: InteractionDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &964568347
 Transform:
   m_ObjectHideFlags: 0
@@ -6064,11 +6065,23 @@ CircleCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1
+--- !u!114 &964568349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964568346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0283c24d366ed941acbbe9c4376cf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &972567440
 GameObject:
   m_ObjectHideFlags: 0
@@ -6314,7 +6327,7 @@ GameObject:
   - component: {fileID: 1451474109}
   - component: {fileID: 1451474110}
   m_Layer: 0
-  m_Name: Interaction Icon
+  m_Name: InteractionIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6330,7 +6343,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964568347}
@@ -6379,7 +6392,7 @@ SpriteRenderer:
   m_SortingLayerID: -1413989431
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -2510476293373519475, guid: c681ffccb175c4e46a688b8665c377da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

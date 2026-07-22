@@ -30,6 +30,8 @@ public class Chest : MonoBehaviour, IInteractable
         if (itemPrefab)
         {
             GameObject droppedItem = Instantiate(itemPrefab, transform.position + Vector3.down, Quaternion.identity);
+
+
         }
     }
 
@@ -37,7 +39,7 @@ public class Chest : MonoBehaviour, IInteractable
     {
         if (IsOpened = opened)
         {
-            GetComponent<SpriteRenderer>().sprite = openedSprite;
+
         }
     }
 }
