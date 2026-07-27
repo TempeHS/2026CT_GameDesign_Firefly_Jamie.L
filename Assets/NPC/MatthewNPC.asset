@@ -16,9 +16,10 @@ MonoBehaviour:
   npcPortrait: {fileID: 21300000, guid: 398bf9cdb61c2f545af7ff627e624e7e, type: 3}
   dialogueLines:
   - Hello
-  - Firefly or sum idk
-  - I love yuri so much
-  - stellefly forever
+  - I am matthew
+  - Whats your name?
+  - 'Nice Name '
+  - Do you want to be friends?
   typingSpeed: 0.05
-  autoProgressLines: 
+  autoProgressLines: 0101010100
   autoProgressDelay: 1.5
