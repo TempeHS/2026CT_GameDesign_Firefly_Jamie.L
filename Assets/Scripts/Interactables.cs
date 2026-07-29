@@ -15,6 +15,7 @@ public class InteractionDetector : MonoBehaviour
     {
         if (context.performed)
         {
+            Debug.Log("E pressed — Interact fired!");
             interactableInRange?.Interact();
         }
     }
@@ -37,5 +38,10 @@ public class InteractionDetector : MonoBehaviour
             interactionIcon.SetActive(false);
         }
     }
+    void Awake()
+    {
+        Debug.Log("InteractionDetector on PLAYER is active");
+    }
+
 
 }

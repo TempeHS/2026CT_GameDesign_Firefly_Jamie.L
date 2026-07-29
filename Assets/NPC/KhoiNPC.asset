@@ -10,24 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 932043692a4b9d24db725704e32faf1d, type: 3}
-  m_Name: MatthewNPC
+  m_Name: KhoiNPC
   m_EditorClassIdentifier: 
-  npcName: Matthew
-  npcPortrait: {fileID: 21300000, guid: 398bf9cdb61c2f545af7ff627e624e7e, type: 3}
+  npcName: Khoi
+  npcPortrait: {fileID: 0}
   dialogueLines:
-  - Hello
-  - I am matthew
-  - Whats your name?
-  - 'Nice Name '
-  - Do you want to be friends?
-  - Yay!
-  - Fuck you
+  - "Time doesn\u2019t heal; it simply teaches us how to carry what we couldn\u2019t
+    drop."
   typingSpeed: 0.05
-  autoProgressLines: 0101010100
+  autoProgressLines: 
   autoProgressDelay: 1.5
-  choices:
-  - DialogueIndex: 4
-    choices:
-    - Yes
-    - No
-    nextDialogueIndexs: 
