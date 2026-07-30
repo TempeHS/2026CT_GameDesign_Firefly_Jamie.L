@@ -8,6 +8,7 @@ public class NPCDialogue : ScriptableObject
     public string[] dialogueLines;
     public float typingSpeed = 0.05f;
     public bool[] autoProgressLines;
+    public bool[] endDialogueLines;
     public float autoProgressDelay = 1.5f;
 
     public DialogueChoice[] choices;

@@ -21,13 +21,14 @@ MonoBehaviour:
   - 'Nice Name '
   - Do you want to be friends?
   - Yay!
-  - Fuck you
+  - Aw ok...
   typingSpeed: 0.05
-  autoProgressLines: 0101010100
+  autoProgressLines: 01010101000000
+  endDialogueLines: 00000000000101
   autoProgressDelay: 1.5
   choices:
   - DialogueIndex: 4
     choices:
     - Yes
     - No
-    nextDialogueIndexs: 
+    nextDialogueIndexs: 0500000006000000

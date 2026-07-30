@@ -42,7 +42,7 @@ public class NPC : MonoBehaviour, IInteractable
         dialogueIndex = 0;
         dialogueUI.SetNPCInfo(dialogueData.npcName, dialogueData.npcPortrait);
         dialogueUI.ShowDialogueUI(true);
-        StartCoroutine(Typeline());
+        DisplayCurrentLine();
     }
 
     void NextLine()
@@ -53,9 +53,32 @@ public class NPC : MonoBehaviour, IInteractable
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
         }
-        else if (++dialogueIndex < dialogueData.dialogueLines.Length)
+
+        dialogueUI.ClearChoices();
+
+        if (dialogueData.endDialogueLines.Length > dialogueIndex &&
+            dialogueData.endDialogueLines[dialogueIndex])
         {
-            StartCoroutine(Typeline());
+            EndDialogue();
+            return;
+        }
+
+        foreach (DialogueChoice dialogueChoice in dialogueData.choices)
+        {
+            Debug.Log("Checking choice for index: " + dialogueChoice.DialogueIndex);
+
+            if (dialogueChoice.DialogueIndex == dialogueIndex)
+            {
+                Debug.Log("MATCH FOUND — displaying choices!");
+                DisplayChoices(dialogueChoice);
+                return;
+            }
+        }
+
+
+        if (++dialogueIndex < dialogueData.dialogueLines.Length)
+        {
+            DisplayCurrentLine();
         }
         else
         {
@@ -63,7 +86,7 @@ public class NPC : MonoBehaviour, IInteractable
         }
     }
 
-    IEnumerator Typeline()
+    IEnumerator TypeLine()
     {
         isTyping = true;
         dialogueUI.SetDialogueText("");
@@ -82,6 +105,28 @@ public class NPC : MonoBehaviour, IInteractable
             yield return new WaitForSeconds(dialogueData.autoProgressDelay);
             NextLine();
         }
+    }
+
+    void DisplayChoices(DialogueChoice choice)
+    {
+        for (int i = 0; i < choice.choices.Length; i++)
+        {
+            int nextIndex = choice.nextDialogueIndexs[i];
+            dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
+        }
+    }
+
+    void ChooseOption(int nextIndex)
+    {
+        dialogueIndex = nextIndex;
+        dialogueUI.ClearChoices();
+        DisplayCurrentLine();
+    }
+
+    void DisplayCurrentLine()
+    {
+        StopAllCoroutines();
+        StartCoroutine(TypeLine());
     }
 
     public void EndDialogue()
