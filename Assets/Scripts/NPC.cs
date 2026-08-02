@@ -52,29 +52,29 @@ public class NPC : MonoBehaviour, IInteractable
             StopAllCoroutines();
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
+
+            // If this line has choices, show them immediately after finishing typing.
+            dialogueUI.ClearChoices();
+            if (TryDisplayChoicesForCurrentIndex())
+                return;
+
+            // Do not auto-advance on the same click that skipped typing.
+            return;
         }
 
         dialogueUI.ClearChoices();
 
+        // Prioritize showing choices for current line.
+        if (TryDisplayChoicesForCurrentIndex())
+            return;
+
+        // End-check after choices.
         if (dialogueData.endDialogueLines.Length > dialogueIndex &&
             dialogueData.endDialogueLines[dialogueIndex])
         {
             EndDialogue();
             return;
         }
-
-        foreach (DialogueChoice dialogueChoice in dialogueData.choices)
-        {
-            Debug.Log("Checking choice for index: " + dialogueChoice.DialogueIndex);
-
-            if (dialogueChoice.DialogueIndex == dialogueIndex)
-            {
-                Debug.Log("MATCH FOUND — displaying choices!");
-                DisplayChoices(dialogueChoice);
-                return;
-            }
-        }
-
 
         if (++dialogueIndex < dialogueData.dialogueLines.Length)
         {
@@ -84,6 +84,34 @@ public class NPC : MonoBehaviour, IInteractable
         {
             EndDialogue();
         }
+    }
+
+    bool TryDisplayChoicesForCurrentIndex()
+    {
+        if (dialogueData.choices == null) return false;
+
+        foreach (DialogueChoice dialogueChoice in dialogueData.choices)
+        {
+            if (dialogueChoice.DialogueIndex != dialogueIndex) continue;
+
+            if (dialogueChoice.choices == null || dialogueChoice.nextDialogueIndexs == null)
+            {
+                Debug.LogWarning($"Choices missing arrays at dialogue index {dialogueIndex}");
+                return false;
+            }
+
+            if (dialogueChoice.choices.Length != dialogueChoice.nextDialogueIndexs.Length)
+            {
+                Debug.LogWarning($"Choice/next-index length mismatch at dialogue index {dialogueIndex}");
+                return false;
+            }
+
+            DisplayChoices(dialogueChoice);
+            Debug.Log($"Displayed choices at dialogue index {dialogueIndex}");
+            return true;
+        }
+
+        return false;
     }
 
     IEnumerator TypeLine()
@@ -98,6 +126,11 @@ public class NPC : MonoBehaviour, IInteractable
         }
 
         isTyping = false;
+
+        // Show choices as soon as line finishes typing.
+        dialogueUI.ClearChoices();
+        if (TryDisplayChoicesForCurrentIndex())
+            yield break;
 
         if (dialogueData.autoProgressLines.Length > dialogueIndex &&
             dialogueData.autoProgressLines[dialogueIndex])
@@ -118,6 +151,12 @@ public class NPC : MonoBehaviour, IInteractable
 
     void ChooseOption(int nextIndex)
     {
+        if (nextIndex < 0 || nextIndex >= dialogueData.dialogueLines.Length)
+        {
+            Debug.LogWarning($"Invalid next dialogue index: {nextIndex}");
+            return;
+        }
+
         dialogueIndex = nextIndex;
         dialogueUI.ClearChoices();
         DisplayCurrentLine();

@@ -18,5 +18,11 @@ MonoBehaviour:
   - "Time doesn\u2019t heal; it simply teaches us how to carry what we couldn\u2019t
     drop."
   typingSpeed: 0.05
-  autoProgressLines: 
+  autoProgressLines: 01
+  endDialogueLines: 01
   autoProgressDelay: 1.5
+  choices:
+  - DialogueIndex: 0
+    choices:
+    - Is Shakespeare really dead?
+    nextDialogueIndexs: 
