@@ -10,22 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 932043692a4b9d24db725704e32faf1d, type: 3}
-  m_Name: KhoiNPC
+  m_Name: WolfgangNPC
   m_EditorClassIdentifier: 
-  npcName: Khoi
+  npcName: Wolfgang
   npcPortrait: {fileID: 0}
   dialogueLines:
-  - The more we cling to control
-  - the less control we actually have.
-  - Slur
-  - Aura monster
+  - I put my snack on the shelf
+  - "now it\u2019s a shelf snack."
   typingSpeed: 0.05
-  autoProgressLines: 0100
-  endDialogueLines: 00000101
+  autoProgressLines: 0101
+  endDialogueLines: 0001
   autoProgressDelay: 1.5
-  choices:
-  - DialogueIndex: 1
-    choices:
-    - Is Shakespeare really dead?
-    - Alright who is bro
-    nextDialogueIndexs: 0200000003000000
+  choices: []
