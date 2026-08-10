@@ -74,5 +74,20 @@ public class PlayerController : MonoBehaviour
             targetSpawn = "KitchenDoorSpawn";
             SceneManager.LoadScene("Kitchen");
         }
+        else if (other.CompareTag("kitchen-main"))
+        {
+            targetSpawn = "kitchentomainspawn";
+            SceneManager.LoadScene("Outside Room");
+        }
+        else if (other.CompareTag("main-study"))
+        {
+            targetSpawn = "StudySpawn";
+            SceneManager.LoadScene("Study");
+        }
+        else if (other.CompareTag("study-main"))
+        {
+            targetSpawn = "studytomainspawn";
+            SceneManager.LoadScene("Outside Room");
+        }
     }
 }
