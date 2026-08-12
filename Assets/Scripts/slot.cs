@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class slot : MonoBehaviour
+public class Slot : MonoBehaviour
 {
-    public gameObject currentItem; // item thats held
-
+    public GameObject currentItem;
 }

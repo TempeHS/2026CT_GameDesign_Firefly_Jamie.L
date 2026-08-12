@@ -2,20 +2,28 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    public GameObject inventoryPanel;
+    public Transform slotsContainer;
     public GameObject slotPrefab;
     public int slotCount;
     public GameObject[] itemPrefab;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        for (int i = 0; < slotCount; i++)
+        if (slotsContainer == null || slotPrefab == null)
         {
-            Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<slot>();
-            if (i < itemPrefabs.Length)
+            Debug.LogError("Missing slotsContainer or slotPrefab.");
+            return;
+        }
+
+        for (int i = 0; i < slotCount; i++)
+        {
+            GameObject slotObj = Instantiate(slotPrefab, slotsContainer, false);
+            Slot slot = slotObj.GetComponent<Slot>();
+            if (slot == null) continue;
+
+            if (itemPrefab != null && i < itemPrefab.Length && itemPrefab[i] != null)
             {
-                GameObject item = Instantiate(itemPrefab[i], slot.transform);
-                item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero
+                GameObject item = Instantiate(itemPrefab[i], slot.transform, false);
                 slot.currentItem = item;
             }
         }
