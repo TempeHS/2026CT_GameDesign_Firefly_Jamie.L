@@ -2,13 +2,14 @@
 
 | Field | Detail |
 |---|---|
-| **Game Title** | |
+| **Game Title** |Me|
 | **Student Name(s)** | |
 | **Class / Course** | |
 | **Repository** | |
 | **Unity Version** | |
 | **Document Version** | |
-| **Date** | |
+| **Date** | 
+|
 
 ---
 
