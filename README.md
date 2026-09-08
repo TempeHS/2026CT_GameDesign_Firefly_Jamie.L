@@ -2,14 +2,13 @@
 
 | Field | Detail |
 |---|---|
-| **Game Title** |Me|
-| **Student Name(s)** | |
-| **Class / Course** | |
-| **Repository** | |
-| **Unity Version** | |
-| **Document Version** | |
-| **Date** | 
-|
+| **Game Title** |Firefly |
+| **Student Name(s)** | Jamie L|
+| **Class / Course** | 10CT1|
+| **Repository** | https://github.com/TempeHS/2026CT_GameDesign_Firefly_Jamie.L|
+| **Unity Version** | 6.000.0.58f1|
+| **Document Version** | 0.1|
+| **Date** |27/08/2026 |
 
 ---
 
@@ -32,13 +31,13 @@
 ## 1. Game Overview
 
 ### 1.1 Genre
-
+Adventure
 
 ### 1.2 Target Audience
-
+My target audience is ages 13-20 or anybody interested in adventure games.  
 
 ### 1.3 Game Summary
-
+My game is about a child in an orphanage
 
 ### 1.4 Win / Loss Conditions
 | Condition | Description |
