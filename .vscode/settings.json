@@ -54,7 +54,7 @@
         "csharp": false
     },
     "chat.agent.enabled": false,
-    "dotnet.defaultSolution": "2026CT_Unknown_Jamie.L.slnx",
+    "dotnet.defaultSolution": "2026CT_GameDesign_Firefly_Jamie.L.slnx",
     "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
     "dotnet.codeLens.enableReferencesCodeLens": true,
     "dotnet.codeLens.enableTestsCodeLens": true,
