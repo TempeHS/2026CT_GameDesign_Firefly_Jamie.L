@@ -37,18 +37,15 @@ Adventure
 My target audience is ages 13-20 or anybody interested in adventure games.  
 
 ### 1.3 Game Summary
-My game is about a child in an orphanage
+My game is about a child in an orphanage. You have to talk to people, explore and find useful items
 
 ### 1.4 Win / Loss Conditions
-| Condition | Description |
-|---|---|
-| Win | |
-| Loss | |
+None
 
 ### 1.5 Platform & Build Settings
 | Setting | Detail |
 |---|---|
-| Target Platform | |
+| WindowsX64 | |
 | Resolution | |
 | Build Type | |
 
@@ -89,8 +86,8 @@ My game is about a child in an orphanage
 ### 3.1 Core Mechanics
 | ID | Mechanic | Description | Implemented In (Script/Object) |
 |---|---|---|---|
-| M-1 | | | |
-| M-2 | | | |
+| M-1 |Interaction |You can interact with NPCs and items |Object |
+| M-2 |Inventory Menu |An openable inventory with a map and player infomation |Object |
 | M-3 | | | |
 | M-4 | | | |
 | M-5 | | | |
