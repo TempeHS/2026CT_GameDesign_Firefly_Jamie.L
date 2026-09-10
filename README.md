@@ -46,7 +46,7 @@ None
 | Setting | Detail |
 |---|---|
 | WindowsX64 | |
-| Resolution | |
+| 1920x1080 | |
 | Build Type | |
 
 ---
@@ -86,68 +86,45 @@ None
 ### 3.1 Core Mechanics
 | ID | Mechanic | Description | Implemented In (Script/Object) |
 |---|---|---|---|
-| M-1 |Interaction |You can interact with NPCs and items |Object |
-| M-2 |Inventory Menu |An openable inventory with a map and player infomation |Object |
-| M-3 | | | |
-| M-4 | | | |
-| M-5 | | | |
+| M-1 |Interaction |You can interact with NPCs and items |both |
+| M-2 |Inventory Menu |An openable inventory with a map and player infomation |both |
+| M-3 |Room transitions |you can transition inbetween rooms |both |
+| M-4 |Collision |You can bump into objects and walk through some of them|object |
 
 ### 3.2 Player Controls
 | Action | Input (Keyboard / Controller) | Description |
 |---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
+| Walking|WASD |Moving the player around the screen |
+|Interaction with objects and NPCS | Hold E| Open Dialouge options
 
 ### 3.3 Physics & Collision
 | Feature | Description |
 |---|---|
-| | |
-| | |
-| | |
+| Walk into objects|You stop moving when you crash into something |
 
 ### 3.4 Game Loop
 | Stage | Description |
 |---|---|
-| Start / Initialisation | |
-| Core Loop | |
-| Win / End State | |
-| Restart | |
+| Start / Initialisation |Start Menu |
+| Core Loop |Explortaion of map |
+| Win / End State |none |
+| Restart | none|
 
 ### 3.5 Scoring & Progression
-| Element | Description |
-|---|---|
-| Scoring System | |
-| Difficulty Progression | |
-| Unlockables / Levels | |
+none
 
 ---
 
 ## 4. Visual Features
 
 ### 4.1 Particle Effects
-
-| Effect Name | Purpose | Screenshot |
-|---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
-
-> Add screenshot images using: `![Effect Name](./docs/screenshots/effect_name.png)`
+None
 
 ---
 
 ### 4.2 Cut Scenes & Cinematics
 
-| Cut Scene | Trigger | Description | Screenshot / Still |
-|---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
-
-> Add screenshot images using: `![Cut Scene Name](./docs/screenshots/cutscene_name.png)`
+None
 
 ---
 
@@ -155,35 +132,20 @@ None
 
 | Animation | Object / Character | Description | Screenshot |
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+|Walking |Player |Legs moving forwards and backwards | |
+|Idle | Player| Character bouncing up and down whilst not moving| |
 
 > Add screenshot images using: `![Animation Name](./docs/screenshots/animation_name.png)`
 
 ---
 
 ### 4.4 Lighting & Post-Processing
-
-| Feature | Description | Screenshot |
-|---|---|---|
-| | | |
-| | | |
-| | | |
-
-> Add screenshot images using: `![Feature Name](./docs/screenshots/lighting_name.png)`
+none
 
 ---
 
 ### 4.5 Shaders & Materials
-
-| Shader / Material | Applied To | Description | Screenshot |
-|---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
-
-> Add screenshot images using: `![Shader Name](./docs/screenshots/shader_name.png)`
+none
 
 ---
 
@@ -205,25 +167,13 @@ None
 ## 5. Audio Design
 
 ### 5.1 Music
-| Track | Scene / Trigger | Source / Composer |
-|---|---|---|
-| | | |
-| | | |
+none
 
 ### 5.2 Sound Effects
-| Sound Effect | Trigger | Source |
-|---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
+none
 
 ### 5.3 Audio Implementation
-| Feature | Description |
-|---|---|
-| Audio Mixer / Groups | |
-| Spatial / 3D Audio | |
-| Dynamic Audio | |
+none
 
 ---
 
