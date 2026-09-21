@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class NPC : MonoBehaviour, IInteractable
 {
     public NPCDialogue dialogueData;
+    public NPCDialogue returnedDiaryDialogue;
 
     private DialogueController dialogueUI;
     private int dialogueIndex;
@@ -14,6 +15,11 @@ public class NPC : MonoBehaviour, IInteractable
     private void Start()
     {
         dialogueUI = DialogueController.Instance;
+
+        if (GameState.DiaryReturned && returnedDiaryDialogue != null)
+        {
+            dialogueData = returnedDiaryDialogue;
+        }
     }
 
     public bool CanInteract()

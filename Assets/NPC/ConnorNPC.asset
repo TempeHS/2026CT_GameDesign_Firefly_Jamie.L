@@ -15,9 +15,11 @@ MonoBehaviour:
   npcName: Connor
   npcPortrait: {fileID: 0}
   dialogueLines:
-  - Hi my name is Connor
-  - I love firefly
-  - StellexFirefly forever
+  - I think i lost my diary
+  - Can you go find it for me?
+  - Miss doesn't like it when I leave stuff around
   typingSpeed: 0.05
   autoProgressLines: 010100
+  endDialogueLines: 
   autoProgressDelay: 1.5
+  choices: []

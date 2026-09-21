@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932043692a4b9d24db725704e32faf1d, type: 3}
+  m_Name: ConnorFinish
+  m_EditorClassIdentifier: 
+  npcName: Connor
+  npcPortrait: {fileID: 0}
+  dialogueLines:
+  - Wow you found it!
+  - Did you read it?
+  - Oh ok good
+  - I think Khoi wanted some help btw
+  - I last saw him in the bathroom
+  typingSpeed: 0.05
+  autoProgressLines: 0100000000
+  endDialogueLines: 0000000001
+  autoProgressDelay: 1.5
+  choices:
+  - DialogueIndex: 1
+    choices:
+    - Nope
+    - I would never
+    nextDialogueIndexs: 0200000002000000

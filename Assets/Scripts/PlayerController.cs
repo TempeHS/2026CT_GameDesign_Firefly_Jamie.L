@@ -47,47 +47,4 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("InputY", moveInput.y);
 
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("main-bed"))
-        {
-            targetSpawn = "BedroomDoorSpawn";
-            SceneManager.LoadScene("Main Bedroom");
-        }
-        else if (other.CompareTag("main-bath"))
-        {
-            targetSpawn = "BathroomDoorSpawn";
-            SceneManager.LoadScene("Bathroom");
-        }
-        else if (other.CompareTag("bed-main"))
-        {
-            targetSpawn = "bedtomainspawn";
-            SceneManager.LoadScene("Outside Room");
-        }
-        else if (other.CompareTag("bath-main"))
-        {
-            targetSpawn = "bathtomainspawn";
-            SceneManager.LoadScene("Outside Room");
-        }
-        else if (other.CompareTag("main-kitchen"))
-        {
-            targetSpawn = "KitchenDoorSpawn";
-            SceneManager.LoadScene("Kitchen");
-        }
-        else if (other.CompareTag("kitchen-main"))
-        {
-            targetSpawn = "kitchentomainspawn";
-            SceneManager.LoadScene("Outside Room");
-        }
-        else if (other.CompareTag("main-study"))
-        {
-            targetSpawn = "StudySpawn";
-            SceneManager.LoadScene("Study");
-        }
-        else if (other.CompareTag("study-main"))
-        {
-            targetSpawn = "studytomainspawn";
-            SceneManager.LoadScene("Outside Room");
-        }
-    }
 }
