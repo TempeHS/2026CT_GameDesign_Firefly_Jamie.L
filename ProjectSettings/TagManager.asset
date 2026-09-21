@@ -13,6 +13,7 @@ TagManager:
   - kitchen-main
   - main-study
   - study-main
+  - tut-bed
   layers:
   - Default
   - TransparentFX

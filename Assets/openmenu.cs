@@ -5,7 +5,7 @@ public class openmenu : MonoBehaviour
 {
     public void OnStartClick()
     {
-        SceneManager.LoadScene("Main Bedroom");
+        SceneManager.LoadScene("Tutorial");
     }
     public void OnExitClick()
     {

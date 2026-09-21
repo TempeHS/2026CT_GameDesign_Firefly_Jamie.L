@@ -13,5 +13,9 @@ public class MemoryPaper : MonoBehaviour, IInteractable
     public void Interact()
     {
         PaperUI.Instance.Open(paperText);
+        Debug.Log("MemoryPaper Interact called");
+        Debug.Log("PaperUI.Instance = " + PaperUI.Instance);
+        PaperUI.Instance.Open(paperText);
     }
+
 }

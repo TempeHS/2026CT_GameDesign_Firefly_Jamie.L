@@ -20,9 +20,11 @@ MonoBehaviour:
   - In this game you have to explore an orphanage
   - Use WASD to move
   - Hold E to interact
+  - This orphanage holds some secrets
+  - Some things might be locked behind a puzzle
   - Have fun!
   typingSpeed: 0.05
-  autoProgressLines: 010101010101
-  endDialogueLines: 000000000001
+  autoProgressLines: 0101010101010101
+  endDialogueLines: 0000000000000001
   autoProgressDelay: 1.5
   choices: []

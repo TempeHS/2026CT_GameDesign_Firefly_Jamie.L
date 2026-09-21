@@ -7,6 +7,8 @@ public class PaperUI : MonoBehaviour
 
     public GameObject panel;
     public TMP_Text textField;
+    public GameObject Paper;
+        public GameObject Closebutton;
 
     void Awake()
     {
@@ -17,10 +19,15 @@ public class PaperUI : MonoBehaviour
     {
         textField.text = text;
         panel.SetActive(true);
+        Paper.SetActive(true);
+        Closebutton.SetActive(true);
     }
 
     public void Close()
     {
         panel.SetActive(false);
+        Instance = this;
+        Debug.Log("PaperUI Awake, Instance set");
     }
+
 }
