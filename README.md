@@ -279,9 +279,9 @@ none
 ### 10.1 Visual Assets
 | Asset Name | Type | Creator / Source | Licence | URL | Used For |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| | | | | https://0-mem0ry.itch.io/fancy-mansion-furniture-set-free?utm_source=chatgpt.com| |
+| | | | | https://cainos.itch.io/pixel-art-top-down-basic?download| |
+| | | | |https://pixel-boy.itch.io/ninja-adventure-asset-pack | |
 
 ### 10.2 Audio Assets
 | Asset Name | Type | Creator / Source | Licence | URL | Used For |
