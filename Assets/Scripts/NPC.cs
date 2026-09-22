@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -9,7 +10,11 @@ public class NPC : MonoBehaviour, IInteractable
     public NPCDialogue returnedDiaryDialogue;
     public NPCDialogue secondQuestDialogue;
     public NPCDialogue thirdQuestDialogue;
-    public NPCDialogue diaryReadAgainDialogue;
+
+    [Header("Only for NPCs that should stay hidden until a condition is met")]
+    public bool requiresDiaryReadAgain = false;
+
+    public event Action OnDialogueEnded;
 
     private DialogueController dialogueUI;
     private int dialogueIndex;
@@ -19,11 +24,12 @@ public class NPC : MonoBehaviour, IInteractable
     {
         dialogueUI = DialogueController.Instance;
 
-        if (GameState.DiaryReadAgain && diaryReadAgainDialogue != null)
+        if (requiresDiaryReadAgain)
         {
-            dialogueData = diaryReadAgainDialogue;
+            gameObject.SetActive(GameState.DiaryReadAgain);
         }
-        else if (GameState.ThirdQuestCompleted && thirdQuestDialogue != null)
+
+        if (GameState.ThirdQuestCompleted && thirdQuestDialogue != null)
         {
             dialogueData = thirdQuestDialogue;
         }
@@ -41,7 +47,7 @@ public class NPC : MonoBehaviour, IInteractable
     {
         return true;
     }
-
+    
     public void Interact()
     {
         if (dialogueData == null)
@@ -196,5 +202,7 @@ public class NPC : MonoBehaviour, IInteractable
         dialogueUI.SetDialogueText("");
         dialogueUI.ShowDialogueUI(false);
         Debug.Log("Closing dialogue for: " + dialogueData.npcName);
+
+        OnDialogueEnded?.Invoke();
     }
 }

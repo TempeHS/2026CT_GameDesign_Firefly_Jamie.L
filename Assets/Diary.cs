@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -6,51 +7,78 @@ public class Diary : MonoBehaviour, IInteractable
     public InteractionMessage interactionMessage;
     public Tilemap diaryTilemap;
 
+    [TextArea]
+    public string firstReadPage1 = "I don't know how much longer I can stay here.";
+    [TextArea]
+    public string firstReadPage2 = "Miss says everything is going to be okay, but I don't believe her.";
+
+    [TextArea]
+    public string secondReadPage1 = "Brian asked me if I remember him";
+    [TextArea]
+    public string secondReadPage2 = "I said yes. I should've said no";
+
+    [Header("Pagination Timing")]
+    [Tooltip("How long page 1 stays visible before automatically switching to page 2.")]
+    public float pageDelay = 3f;
+
+    private bool isReading = false;
+
     private void Start()
     {
         if (GameState.ThirdQuestCompleted)
         {
-            // NPC3's quest is done - diary reappears for its second read.
             gameObject.SetActive(true);
         }
         else if (GameState.DiaryReturned)
         {
-            // Diary was already read once, but NPC3's quest isn't done yet - stay hidden.
             gameObject.SetActive(false);
         }
     }
 
     public bool CanInteract()
     {
-        return true;
+        return !isReading;
     }
 
     public void Interact()
     {
-        if (GameState.ThirdQuestCompleted)
+        if (isReading) return;
+
+        StartCoroutine(ReadDiaryRoutine());
+    }
+
+    private IEnumerator ReadDiaryRoutine()
+    {
+        isReading = true;
+
+        bool isSecondRead = GameState.ThirdQuestCompleted;
+
+        string page1 = isSecondRead ? secondReadPage1 : firstReadPage1;
+        string page2 = isSecondRead ? secondReadPage2 : firstReadPage2;
+
+        interactionMessage.ShowMessage(page1);
+
+        yield return new WaitForSeconds(pageDelay);
+
+        interactionMessage.ShowMessage(page2);
+
+        if (isSecondRead)
         {
-            interactionMessage.ShowMessage(
-                "Brian asked me if I would remember him" +
-                "I said yes. I don't think I should've"
-            );
-
             GameState.DiaryReadAgain = true;
-
-            gameObject.SetActive(false);
         }
         else
         {
-            interactionMessage.ShowMessage(
-                "I don't know how much longer I can stay here. " +
-                "Miss says everything is going to be okay, but I don't believe her."
-            );
-
             diaryTilemap.SetTile(new Vector3Int(-30, 26, 0), null);
             diaryTilemap.SetTile(new Vector3Int(-29, 26, 0), null);
 
             GameState.DiaryReturned = true;
-
-            gameObject.SetActive(false);
         }
+
+        // Wait for the second page's own display duration before hiding the diary,
+        // so it doesn't disappear while page 2 is still showing.
+        yield return new WaitForSeconds(interactionMessage.displayDuration);
+
+        gameObject.SetActive(false);
+        isReading = false;
     }
 }

@@ -18,6 +18,15 @@ public class InteractionMessage : MonoBehaviour
 
     private Coroutine activeRoutine;
 
+    private void Awake()
+    {
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 0f;
+            canvasGroup.blocksRaycasts = false;
+        }
+    }
+
     public void ShowMessage(string message)
     {
         messageText.text = message;
@@ -32,7 +41,7 @@ public class InteractionMessage : MonoBehaviour
 
     private IEnumerator ShowMessageRoutine()
     {
-        messageObject.SetActive(true);
+        if (canvasGroup != null) canvasGroup.blocksRaycasts = true;
 
         yield return Fade(0f, 1f);
 
@@ -40,7 +49,7 @@ public class InteractionMessage : MonoBehaviour
 
         yield return Fade(1f, 0f);
 
-        messageObject.SetActive(false);
+        if (canvasGroup != null) canvasGroup.blocksRaycasts = false;
     }
 
     private IEnumerator Fade(float from, float to)
