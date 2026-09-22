@@ -9850,6 +9850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1bddb91c6d1c1479aa672962f9fbb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
+  interactionMessage: {fileID: 0}
 --- !u!1 &1376903341
 GameObject:
   m_ObjectHideFlags: 0
@@ -10802,7 +10804,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5d8d418957e234eaceed6e48dddbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueData: {fileID: 11400000, guid: a5ee34d53b4308e49b204d7c91c3a6b3, type: 2}
+  dialogueData: {fileID: 11400000, guid: 328fa624890f642468ed28f2bfedebd6, type: 2}
+  returnedDiaryDialogue: {fileID: 11400000, guid: a5ee34d53b4308e49b204d7c91c3a6b3, type: 2}
+  secondQuestDialogue: {fileID: 11400000, guid: b96cb039bd7820e4da5225792433c9d9, type: 2}
 --- !u!61 &1590383039
 BoxCollider2D:
   m_ObjectHideFlags: 0

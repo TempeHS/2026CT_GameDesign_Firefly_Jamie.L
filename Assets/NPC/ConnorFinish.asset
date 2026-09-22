@@ -21,7 +21,7 @@ MonoBehaviour:
   - I think Khoi wanted some help btw
   - I last saw him in the bathroom
   typingSpeed: 0.05
-  autoProgressLines: 0100000000
+  autoProgressLines: 0100010101
   endDialogueLines: 0000000001
   autoProgressDelay: 1.5
   choices:

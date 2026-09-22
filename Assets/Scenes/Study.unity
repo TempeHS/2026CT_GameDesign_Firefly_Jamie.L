@@ -16203,6 +16203,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData: {fileID: 11400000, guid: 554e91ae46b798f4ca40228027625aed, type: 2}
+  returnedDiaryDialogue: {fileID: 11400000, guid: 554e91ae46b798f4ca40228027625aed, type: 2}
+  secondQuestDialogue: {fileID: 11400000, guid: 554e91ae46b798f4ca40228027625aed, type: 2}
+  thirdQuestDialogue: {fileID: 11400000, guid: 6d939d3ea34e73744aaf1e2079d3eaea, type: 2}
+  diaryReadAgainDialogue: {fileID: 0}
 --- !u!61 &477219693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19636,6 +19640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1bddb91c6d1c1479aa672962f9fbb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
+  interactionMessage: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

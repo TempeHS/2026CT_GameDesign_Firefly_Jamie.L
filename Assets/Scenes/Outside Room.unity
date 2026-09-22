@@ -352,6 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueData: {fileID: 11400000, guid: b37061d1fd9e7ea459b7116d33de0e89, type: 2}
   returnedDiaryDialogue: {fileID: 11400000, guid: 84e159fcf5dc0be4a9a87c529f89d401, type: 2}
+  secondQuestDialogue: {fileID: 0}
 --- !u!61 &139217933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2396,8 +2397,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 80, y: 85}
-  m_SizeDelta: {x: -560, y: -70}
+  m_AnchoredPosition: {x: 80, y: 35}
+  m_SizeDelta: {x: -560, y: -170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &620065670
 MonoBehaviour:

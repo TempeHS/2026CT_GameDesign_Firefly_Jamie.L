@@ -7,6 +7,9 @@ public class NPC : MonoBehaviour, IInteractable
 {
     public NPCDialogue dialogueData;
     public NPCDialogue returnedDiaryDialogue;
+    public NPCDialogue secondQuestDialogue;
+    public NPCDialogue thirdQuestDialogue;
+    public NPCDialogue diaryReadAgainDialogue;
 
     private DialogueController dialogueUI;
     private int dialogueIndex;
@@ -16,7 +19,19 @@ public class NPC : MonoBehaviour, IInteractable
     {
         dialogueUI = DialogueController.Instance;
 
-        if (GameState.DiaryReturned && returnedDiaryDialogue != null)
+        if (GameState.DiaryReadAgain && diaryReadAgainDialogue != null)
+        {
+            dialogueData = diaryReadAgainDialogue;
+        }
+        else if (GameState.ThirdQuestCompleted && thirdQuestDialogue != null)
+        {
+            dialogueData = thirdQuestDialogue;
+        }
+        else if (GameState.SecondQuestCompleted && secondQuestDialogue != null)
+        {
+            dialogueData = secondQuestDialogue;
+        }
+        else if (GameState.DiaryReturned && returnedDiaryDialogue != null)
         {
             dialogueData = returnedDiaryDialogue;
         }

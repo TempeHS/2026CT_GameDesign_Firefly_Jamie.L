@@ -10,17 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 932043692a4b9d24db725704e32faf1d, type: 3}
-  m_Name: WolfgangNPC
+  m_Name: WolfgangFinish
   m_EditorClassIdentifier: 
   npcName: Wolfgang
   npcPortrait: {fileID: 0}
   dialogueLines:
-  - I hate losing
-  - I can only calm myself down with a good book or a nice memory
-  - But i can't find any good books to read
-  - Can you a photograph with everybody in it?
+  - Oh great!
+  - This has everybody in it!
+  - What?
+  - This is everybody...
   typingSpeed: 0.05
-  autoProgressLines: 01010101
+  autoProgressLines: 01000101
   endDialogueLines: 00000001
   autoProgressDelay: 1.5
-  choices: []
+  choices:
+  - DialogueIndex: 1
+    choices:
+    - What about Brian?
+    - Wasn't there another person in the photo?
+    nextDialogueIndexs: 0200000002000000

@@ -15,17 +15,12 @@ MonoBehaviour:
   npcName: Khoi
   npcPortrait: {fileID: 0}
   dialogueLines:
-  - The more we cling to control
-  - the less control we actually have.
-  - Slur
-  - Aura monster
+  - Oh hey!
+  - I'm feeling kinda down rn...
+  - Can you go find the photo of everyone in the orphanage?
+  - It should be next to my bed
   typingSpeed: 0.05
-  autoProgressLines: 0100
-  endDialogueLines: 00000101
+  autoProgressLines: 01010101
+  endDialogueLines: 00000001
   autoProgressDelay: 1.5
-  choices:
-  - DialogueIndex: 1
-    choices:
-    - Is Shakespeare really dead?
-    - Alright who is bro
-    nextDialogueIndexs: 0200000003000000
+  choices: []

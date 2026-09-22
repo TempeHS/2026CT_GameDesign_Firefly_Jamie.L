@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 932043692a4b9d24db725704e32faf1d, type: 3}
-  m_Name: WolfgangNPC
+  m_Name: KhoiBeforeAfter
   m_EditorClassIdentifier: 
-  npcName: Wolfgang
+  npcName: Khoi
   npcPortrait: {fileID: 0}
   dialogueLines:
-  - I hate losing
-  - I can only calm myself down with a good book or a nice memory
-  - But i can't find any good books to read
-  - Can you a photograph with everybody in it?
+  - I'm about to play a board game
+  - But nature calls...
   typingSpeed: 0.05
-  autoProgressLines: 01010101
-  endDialogueLines: 00000001
+  autoProgressLines: 0101
+  endDialogueLines: 0001
   autoProgressDelay: 1.5
   choices: []

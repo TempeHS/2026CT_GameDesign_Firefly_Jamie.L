@@ -152,7 +152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionMessage: {fileID: 709908954}
   diaryTilemap: {fileID: 1090198878}
-  diaryOwner: {fileID: 0}
 --- !u!61 &95357110
 BoxCollider2D:
   m_ObjectHideFlags: 0

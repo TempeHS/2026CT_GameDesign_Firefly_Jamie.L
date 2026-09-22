@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 932043692a4b9d24db725704e32faf1d, type: 3}
-  m_Name: WolfgangNPC
+  m_Name: KhoiFinish
   m_EditorClassIdentifier: 
-  npcName: Wolfgang
+  npcName: Khoi
   npcPortrait: {fileID: 0}
   dialogueLines:
-  - I hate losing
-  - I can only calm myself down with a good book or a nice memory
-  - But i can't find any good books to read
-  - Can you a photograph with everybody in it?
+  - Aw thanks!
+  - This has everybody in it!
+  - I think wolfgang was feeling down as well
+  - We both lost in our board game...
+  - Hes a bit of a nerd
+  - He should be in the library
   typingSpeed: 0.05
-  autoProgressLines: 01010101
-  endDialogueLines: 00000001
+  autoProgressLines: 010101010100
+  endDialogueLines: 000000000001
   autoProgressDelay: 1.5
   choices: []
