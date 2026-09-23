@@ -37,10 +37,10 @@ Adventure
 My target audience is ages 13-20 or anybody interested in adventure games.  
 
 ### 1.3 Game Summary
-My game is about a child in an orphanage. You have to talk to people, explore and find useful items
+My game is about a child in an orphanage. You have to talk to people, explore, find useful items and discover the secrets of the orphanage. The game is set in a 2D top down perspective. The player can move around the map and interact with objects and NPCs. The player can also open an inventory menu to view their items and map. The player can also transition between rooms. The game is set in a spooky orphanage with a dark atmosphere.
 
 ### 1.4 Win / Loss Conditions
-None
+The win condition is if you complete the storyline and find out the secrets of the orphanage. There is no loss condition as the player can explore the map and interact with objects and NPCs at their own pace.
 
 ### 1.5 Platform & Build Settings
 | Setting | Detail |
@@ -111,7 +111,7 @@ None
 | Restart | none|
 
 ### 3.5 Scoring & Progression
-none
+Player progression is based on exploration and discovery of the orphanage's secrets. There is no traditional scoring system.
 
 ---
 
@@ -124,7 +124,7 @@ None
 
 ### 4.2 Cut Scenes & Cinematics
 
-None
+There is one final cutscene at the end of the game where the player finds out the secrets of the orphanage. The cutscene is a final talk with the owner. The cutscene is triggered when the player reaches the end of the game and interacts with the diary the second time.
 
 ---
 
@@ -140,7 +140,7 @@ None
 ---
 
 ### 4.4 Lighting & Post-Processing
-none
+A warm ambient light is used throughout the game with occassional flickering. The outside is more sunny and bright. After completing NPC quest 3, the lighting turns dark with a spotlight effect on the player. The outside turns to nighttime with a dark, tinted look.
 
 ---
 
@@ -167,13 +167,13 @@ none
 ## 5. Audio Design
 
 ### 5.1 Music
-none
+There is background music throughout the game. It is a warm music until the player completes NPC quest 3, then it turns to a dark and spooky music.
 
 ### 5.2 Sound Effects
-none
+There are multiple sound effects in the game. There is a door opening sound effect when the player opens a door. There is a footsteps sound effect when the player walks around. There is a spooky ambience sound effect when the player completes NPC quest 3.
 
 ### 5.3 Audio Implementation
-none
+I used an audio manager script to manage the background music and sound effects. The audio manager script is attached to a game object in the scene and is responsible for playing the background music and sound effects. The audio manager script has a public method that can be called from other scripts to play sound effects.
 
 ---
 
@@ -205,10 +205,14 @@ none
 ### 7.1 Scene List
 | Scene Name | Purpose | Description |
 |---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
+|Main Menu | | |
+| Tutorial| | |
+| Main Bedroom| | |
+|Outside Room | | |
+| Kitchen| | |
+| Study| | |
+| Bathroom| | |
+| Outside| | |
 
 ### 7.2 Level / Environment Screenshots
 | Level / Area | Description | Screenshot |
@@ -279,16 +283,18 @@ none
 ### 10.1 Visual Assets
 | Asset Name | Type | Creator / Source | Licence | URL | Used For |
 |---|---|---|---|---|---|
-| | | | | https://0-mem0ry.itch.io/fancy-mansion-furniture-set-free?utm_source=chatgpt.com| |
+| | | | | https://0-mem0ry.itch.io/fancy-mansion-furniture-set-free| |
 | | | | | https://cainos.itch.io/pixel-art-top-down-basic?download| |
 | | | | |https://pixel-boy.itch.io/ninja-adventure-asset-pack | |
 
 ### 10.2 Audio Assets
 | Asset Name | Type | Creator / Source | Licence | URL | Used For |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| | | | | https://dmochas-assets.itch.io/dmochas-bleeps-pack|Dialogue |
+| | | | |https://sfxmint.com/sounds/ambience-room-tone-03 |Background Music |
+| | | | | https://sfxmint.com/sounds/door-open-01|Door Opening |
+| | | | | https://sfxmint.com/sounds/footsteps-wood-25|Footsteps |
+| | | | |https://opengameart.org/content/horror-atmosphere|Horror Atmosphere |
 
 ### 10.3 Scripts & Code Snippets
 | Script / Snippet | Source | Licence | URL | Used For | Changes Made |
