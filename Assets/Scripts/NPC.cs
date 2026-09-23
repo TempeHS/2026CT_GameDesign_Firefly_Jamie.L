@@ -26,7 +26,14 @@ public class NPC : MonoBehaviour, IInteractable
 
         if (requiresDiaryReadAgain)
         {
+            Debug.Log($"[{gameObject.name}] Start() - GameState.DiaryReadAgain = {GameState.DiaryReadAgain}");
             gameObject.SetActive(GameState.DiaryReadAgain);
+
+            if (!GameState.DiaryReadAgain)
+            {
+                // Stay hidden until the condition is met; don't evaluate dialogue priority yet.
+                return;
+            }
         }
 
         if (GameState.ThirdQuestCompleted && thirdQuestDialogue != null)
@@ -40,6 +47,10 @@ public class NPC : MonoBehaviour, IInteractable
         else if (GameState.DiaryReturned && returnedDiaryDialogue != null)
         {
             dialogueData = returnedDiaryDialogue;
+        }
+        else if (!requiresDiaryReadAgain)
+        {
+            gameObject.SetActive(true);
         }
     }
 
@@ -149,6 +160,12 @@ public class NPC : MonoBehaviour, IInteractable
         foreach (char letter in dialogueData.dialogueLines[dialogueIndex])
         {
             dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
+
+            if (!char.IsWhiteSpace(letter))
+            {
+                AudioManager.Instance.PlayRandomDialogueBlip();
+            }
+
             yield return new WaitForSeconds(dialogueData.typingSpeed);
         }
 

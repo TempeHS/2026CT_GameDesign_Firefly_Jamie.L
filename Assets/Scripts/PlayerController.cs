@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     private Animator animator;
 
+    [Header("Footstep Audio")]
+    public float footstepInterval = 0.35f;
+    private float footstepTimer = 0f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,6 +35,28 @@ public class PlayerController : MonoBehaviour
     {
         rb.linearVelocity = moveInput * moveSpeed;
 
+        HandleFootsteps();
+    }
+
+    private void HandleFootsteps()
+    {
+        if (moveInput.sqrMagnitude > 0.01f)
+        {
+            footstepTimer -= Time.deltaTime;
+            if (footstepTimer <= 0f)
+            {
+                AudioManager.Instance.PlayFootstep();
+                footstepTimer = footstepInterval;
+            }
+        }
+        else
+        {
+            if (footstepTimer != 0f)
+            {
+                AudioManager.Instance.StopFootstep();
+            }
+            footstepTimer = 0f;
+        }
     }
 
     public void move(InputAction.CallbackContext context)

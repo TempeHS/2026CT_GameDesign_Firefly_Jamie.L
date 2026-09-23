@@ -15,6 +15,13 @@ public class InteractionDetector : MonoBehaviour
     {
         if (context.performed)
         {
+            if (interactableInRange is MonoBehaviour mb && !mb.gameObject.activeInHierarchy)
+            {
+                interactableInRange = null;
+                interactionIcon.SetActive(false);
+                return;
+            }
+
             Debug.Log("E pressed — Interact fired!");
             interactableInRange?.Interact();
         }

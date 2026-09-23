@@ -19,6 +19,8 @@ public class Door : MonoBehaviour, IInteractable
             return;
         }
 
+        AudioManager.Instance.PlayDoorOpen();
+
         if (CompareTag("main-bed"))
         {
             PlayerController.targetSpawn = "BedroomDoorSpawn";

@@ -74,6 +74,8 @@ public class Diary : MonoBehaviour, IInteractable
             GameState.DiaryReturned = true;
         }
 
+        AudioManager.Instance.RefreshMusicForQuestProgress();
+
         // Wait for the second page's own display duration before hiding the diary,
         // so it doesn't disappear while page 2 is still showing.
         yield return new WaitForSeconds(interactionMessage.displayDuration);
