@@ -55,15 +55,6 @@ The win condition is if you complete the storyline and find out the secrets of t
 
 ### 2.1 Full Gameplay Walkthrough
 
-<!--
-  Embed a YouTube/Vimeo video or link to a file in the repository.
-  YouTube embed syntax:
-  [![Video Title](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
-
-  OR link to a local file:
-  [Watch Walkthrough Video](./docs/video/walkthrough.mp4)
--->
-
 | Field | Detail |
 |---|---|
 | **My documentation video** | |
@@ -74,8 +65,7 @@ The win condition is if you complete the storyline and find out the secrets of t
 Apologies for horrible video quality. Idk what went wrong.
 
 ### 2.2 Feature Highlight Clips
-
-All features are in the documentation video. There are no separate clips for each feature.
+Inventory feature:https://youtu.be/N3NYn35omfc
 
 ---
 
@@ -88,6 +78,8 @@ All features are in the documentation video. There are no separate clips for eac
 | M-2 |Inventory Menu |An openable inventory with a map and player infomation |both |
 | M-3 |Room transitions |you can transition inbetween rooms |both |
 | M-4 |Collision |You can bump into objects and walk through some of them|object |
+|M-5 |Dialogue |You can talk to NPCs and get information from them |both |
+|M-6|Locked doors |some doors will be locked and unable to access |script |
 
 ### 3.2 Player Controls
 | Action | Input (Keyboard / Controller) | Description |
@@ -130,10 +122,8 @@ There is one final cutscene at the end of the game where the player finds out th
 
 | Animation | Object / Character | Description | Screenshot |
 |---|---|---|---|
-|Walking |Player |Legs moving forwards and backwards | |
-|Idle | Player| Character bouncing up and down whilst not moving| |
-
-> Add screenshot images using: `![Animation Name](./docs/screenshots/animation_name.png)`
+|Walking |Player |Legs moving forwards and backwards | ![walking animation](./screenshots/Screenshot 2026-09-23 215146.png)|
+|Idle | Player| Character bouncing up and down whilst not moving|![Idle animations](./screenshots/Screenshot 2026-09-23 2156312.png) |
 
 ---
 
@@ -149,27 +139,21 @@ none
 
 ### 4.6 Additional Visual Screenshots
 
-<!--
-  Add any other notable screenshots here.
-  Syntax: ![Description](./docs/screenshots/filename.png)
--->
-
 | Description | Screenshot |
 |---|---|
-| | |
-| | |
-| | |
+|Warm lighting for the regular rooms |![Warm lighting](./screenshots/Screenshot 2026-09-23 220449.png) |
+|Sunny lighting for the outside |![The sun outside](./screenshots/Screenshot 2026-09-23 220631.png) |
+|Dark lighting for nighttime |![Nightime Outside](./screenshots/Screenshot 2026-09-23 220744.png) |
+|Darkness for after the lights go out after interacting with the diary a second time|![Darkness around the player](./screenshots/Screenshot 2026-09-23 220820.png) | 
 
 ---
 
 ## 5. Audio Design
 
 ### 5.1 Music
-There is background music throughout the game. It is a warm music until the player completes NPC quest 3, then it turns to a dark and spooky music.
-
+There is music present throughout my whole game to make the atmosphere and the development of my game clear for the player. Initially, at the start of the game, the music is very warm and peaceful for the player, making them feel relaxed and secure while exploring the orphanage and completing quests.However, once the player has successfully completed NPC Quest 3, the music of the game changes to become more dark and mysterious for the player. It gets slower and mysterious and tells the player that there is a shift taking place somewhere, as things are getting dangerous for the player in the orphanage.
 ### 5.2 Sound Effects
-There are multiple sound effects in the game. There is a door opening sound effect when the player opens a door. There is a footsteps sound effect when the player walks around. There is a spooky ambience sound effect when the player completes NPC quest 3.
-
+There are many sound effects in the game to create the feeling of immersion and response from the environment. There is an opening door sound effect that plays whenever the player opens the doors in the environment. There are also footstep sound effects when the player is moving around the orphanage and changing the atmosphere, thus connecting the player to their character.When the player finishes NPC quest 3, a creepy ambience sound effect starts playing. It changes the atmosphere of the environment into a creepier one and creates a connection with the change in background music. With the use of different sounds and music, it shows the player that the orphanage is now a place of danger for the player.
 ### 5.3 Audio Implementation
 I used an audio manager script to manage the background music and sound effects. The audio manager script is attached to a game object in the scene and is responsible for playing the background music and sound effects. The audio manager script has a public method that can be called from other scripts to play sound effects.
 
@@ -180,21 +164,14 @@ I used an audio manager script to manage the background music and sound effects.
 ### 6.1 HUD Elements
 | Element | Purpose | Screenshot |
 |---|---|---|
-| | | |
-| | | |
-| | | |
-
-> Add screenshot images using: `![HUD Element](./docs/screenshots/hud_name.png)`
+| Interaction Prompt| To tell the player when something then can interact with is nearby|![! mark when something interactable is nearby](./screenshots/Screenshot 2026-09-23 221231.png) |
+|NPC dialogue boxes | To display dialogue from NPCs | ![NPC dialogue boxes](./screenshots/Screenshot 2026-09-23 221329.png)|
 
 ### 6.2 Menus
 | Menu | Purpose | Screenshot |
 |---|---|---|
-| Main Menu | | |
-| Pause Menu | | |
-| Game Over Screen | | |
-| | | |
-
-> Add screenshot images using: `![Menu Name](./docs/screenshots/menu_name.png)`
+| Main Menu |To display a start and close game button | ![Main Menu](./screenshots/Screenshot 2026-09-23 221407.png)|
+| Inventory |to display a map and item slots | ![Inventory](./screenshots/Screenshot 2026-09-23 221946.png)|
 
 ---
 
@@ -203,30 +180,24 @@ I used an audio manager script to manage the background music and sound effects.
 ### 7.1 Scene List
 | Scene Name | Purpose | Description |
 |---|---|---|
-|Main Menu | | |
-| Tutorial| | |
-| Main Bedroom| | |
-|Outside Room | | |
-| Kitchen| | |
-| Study| | |
-| Bathroom| | |
-| Outside| | |
+|Main Menu |To display a start and close game button |A simple main menu screen fit with a title, start button and close button. It has the player on the lefthand side |
+| Tutorial|To introduce the players to the mechanics of the game |A small grassy area with a tutorial NPC to let the players figure out how the game works |
+| Main Bedroom|Stores the picture frame |A bedroom with tables and the picture frame which is used in the storyline |
+|Outside Room | The outside room that connects all the other rooms. Stores NPC1| A large room with lots of doors and grass in the middle|
+| Kitchen|No purpose |A kitchen |
+| Study|Stores NPC 3 | A small library with a desk|
+| Bathroom| Stores NPC2|A bathroom. It has toilets(not working) and sinks |
+| Outside| Stores NPC4 and diary|A large outdoors area with a small room to the left |
 
 ### 7.2 Level / Environment Screenshots
-| Level / Area | Description | Screenshot |
-|---|---|---|
-| | | |
-| | | |
-| | | |
-
-> Add screenshot images using: `![Level Name](./docs/screenshots/level_name.png)`
+No levels
 
 ### 7.3 Scene Management
 | Feature | Description |
 |---|---|
-| Scene Loading Method | |
-| Persistent Data Between Scenes | |
-| Scene Transition Effects | |
+| Scene Loading Method |Unity Engine Scene Management |
+| Persistent Data Between Scenes |Static Variables |
+| Scene Transition Effects |None |
 
 ---
 
@@ -235,25 +206,44 @@ I used an audio manager script to manage the background music and sound effects.
 ### 8.1 Script Summary
 | Script Name | Attached To | Responsibility |
 |---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
-
+| Audio Manager.cs|AudioManager game obejct |Manages Audio |
+| Chest.cs|Nothing |Useless dead idea |
+|DialogueController.cs |Dialogue Controller game object |Holds dialogue infomation for NPCS in scene |
+|FlickeringLight2D.cs |2D Light |Makes the lights flicker occasionally |
+|GameState.cs |Gamestate gameobject |Holds the gamestate infomation |
+| Global helper.cs|nothing | Helps make the dialogue work|
+| IInteractables|nothing |Assists Interaction |
+|Interactable.cs |Interaction detector child object around the player |Interaction detector |
+|InventoryController.cs |GameController gameobject |Manages the players inventory |
+|NPC.cs |All NPCS |NPC code that makes them work |
+|OutsideLightingController.cs |Outside lighting manager |Holds the infomation for the outside lighting |
+|PlayerController.cs |Player |Controls the player |
+|camera.cs |Main Camera |Controls the camera movements |
+| menu.cs|UI canvas |holds the infomation for the inventory |
+| slot.cs|Slots |holds the infomation for the slots tab in the inventory |
+|tabs.cs |Tabs |holds the infomation for the tabs tab in the inventory |
+| ConditionalNPCActivator.cs|FinalNPC |Makes the final NPC appear after you reread the diary |
+|Diary.cs |Connor's Diary |Holds the info for the diary |
+| Door.cs|Every single door |Allows the doors to be interacted with and lets me choose if theyre locked or not |
+|ForcedFollowUpDialogue.cs |Cutscene game manager |Holds the info for the cutscene |
+| InteractionMessages.cs|Interaction message child object underneath Canvas |gives the baseline for all popups in the game |
+| Locked Door.cs|None |Assists the door.cs script |
+|MemoryPaper.cs |None |Nothing. Dead idea |
+| PapaerUI.cs| None| Nothing. Dead idea|
+|RoomLightingController.cs |Roomlighting game controller | Lets me change the lighting in all the rooms|
+| SecondQuestItem.cs|Photograph |Hold the photograph infomation |
 ### 8.2 Key Algorithms / Logic
 | Feature | Script | Description |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+| Tag based scene routing | Door.cs | Uses `CompareTag()` to determine which scene to load and which spawn point to use, avoiding a separate script per door |
+| Spawn point persistence | PlayerController.cs | Uses a static string `targetSpawn` to pass data between scenes so the player appears at the correct location after a scene load |
 
 ### 8.3 Design Patterns Used
 | Pattern | Where Applied | Justification |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+| Singleton | AudioManager.Instance | Ensures only one AudioManager exists so music/SFX don't overlap or duplicate across scenes |
+| Static/Global State | PlayerController.targetSpawn | Simple way to pass spawn location data between scenes without needing a persistent manager object |
+| Interface | IInteractable (implemented by Door) | Allows different objects (doors, NPCs, items) to share a common `Interact()`/`CanInteract()` contract, so interaction code can treat them polymorphically |
 
 ---
 
@@ -371,7 +361,6 @@ I used an audio manager script to manage the background music and sound effects.
 | | |
 
 #### Screenshot / Evidence
-<!-- Add a screenshot of the feature working -->
 > `![Feature Name](./docs/screenshots/branch_feature_name.png)`
 
 ---
