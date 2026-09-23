@@ -66,18 +66,16 @@ The win condition is if you complete the storyline and find out the secrets of t
 
 | Field | Detail |
 |---|---|
-| **Video Title** | |
-| **Link / Embed** | |
-| **Duration** | |
-| **Description** | |
+| **My documentation video** | |
+| **https://youtu.be/jBVQdJGBPuA** | |
+| **4m 50s** | |
+| **My documentation video for my computor technology game for 2026.** | |
+
+Apologies for horrible video quality. Idk what went wrong.
 
 ### 2.2 Feature Highlight Clips
 
-| Clip | Description | Link |
-|---|---|---|
-| | | |
-| | | |
-| | | |
+All features are in the documentation video. There are no separate clips for each feature.
 
 ---
 
@@ -107,8 +105,8 @@ The win condition is if you complete the storyline and find out the secrets of t
 |---|---|
 | Start / Initialisation |Start Menu |
 | Core Loop |Explortaion of map |
-| Win / End State |none |
-| Restart | none|
+| Win / End State |You win when you complete the storyline. |
+| Restart | None|
 
 ### 3.5 Scoring & Progression
 Player progression is based on exploration and discovery of the orphanage's secrets. There is no traditional scoring system.
