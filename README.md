@@ -253,14 +253,26 @@ No levels
 
 | # | Title | Author / Creator | URL / Source | What You Used It For | What You Changed / Adapted |
 |---|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
+| 1 |
+Start Menu - 2D Platformer Unity #28 |Game Code Library |https://www.youtube.com/watch?v=paaBTt5GcMU |Base of my start menu |Changed the artwork and titling of my game |
+| 2 |Drag and Drop Inventory UI - Top Down Unity 2D #8
+ |Game Code Library |https://www.youtube.com/watch?v=wlBJ0yZOYfM |My inventory slots |Changed the formatting, amount of slots and parts of the code |
+| 3 |Menu UI with Tab Switching - Top Down Unity 2D #6
+ | Game Code Library|https://www.youtube.com/watch?v=liba3xGI4gM&t=762s |Baseline for my menu |Assisted me in making my menu but did change most of the code |
+| 4 | Create a Dialogue System with Branching Choices - Top Down Unity 2D #22
+|Game Code Library |https://www.youtube.com/watch?v=zbYuLu_8spI&t=1027s |Baseline for dialogue system |Added the feature that makes dialogue change based on how far into the game you are |
+| 5 |Add an Interaction System to your Game - Top Down Unity 2D #16
+ | Game Code Library| https://www.youtube.com/watch?v=MPP9GLp44Pc&t=812s|Making my interaction system |None |
+| 6 |Idle and Walking Player Animations - Top Down Unity 2D #2
+ |Game Code Library |https://www.youtube.com/watch?v=82U4ToJU-28&t=632s |Animating my player character |None |
+| 7 | PERFECT Tilemap Sorting Layers - Top Down Unity 2D #3
+|Game Code Library |https://www.youtube.com/watch?v=UId0mwanBZg&t=138s |I used it as a starting guide  |Amount of tilemap sorting layers |
+| 8 |Enter and Exit Buildings in ONE Scene! - Top Down Unity 2D #30
+ | Game Code Library|https://www.youtube.com/watch?v=4D9utRDwH90 | None|Nothing. Dead idea |
+ |Player Tracking and Camera Bounds - Top Down Unity 2D #4
+ | Game Code Library|https://www.youtube.com/watch?v=kV9rVinFyAk |Camera tracking |I added camera locks to the sides of the game so the camera wouldn't fly off |
+ |Player Movement with Unity Input System - Top Down Unity 2D #1
+|Game Code Library https://www.youtube.com/watch?v=DQY62meLVCk&t=323s| Player movement|None |
 
 ---
 
@@ -271,37 +283,27 @@ No levels
 ### 10.1 Visual Assets
 | Asset Name | Type | Creator / Source | Licence | URL | Used For |
 |---|---|---|---|---|---|
-| | | | | https://0-mem0ry.itch.io/fancy-mansion-furniture-set-free| |
-| | | | | https://cainos.itch.io/pixel-art-top-down-basic?download| |
-| | | | |https://pixel-boy.itch.io/ninja-adventure-asset-pack | |
+|Fancy Mansion Furniture Set free | Tilemap|0_mem0ry | Commercial and non-commercial use permitted. Assets may be modified, but may not be resold or redistributed. Not permitted for AI/NFT use or AI training.| https://0-mem0ry.itch.io/fancy-mansion-furniture-set-free|Tilemaping |
+| Pixel Art Top Down - Basic v1.2.3|Tilemap |Cainos |Commercial and non-commercial use permitted. Assets may be modified. Credit is not required but appreciated. Assets may not be redistributed or resold. | https://cainos.itch.io/pixel-art-top-down-basic?download|Tilemaping |
+| Ninja Adventure Asset Pack|Sprites |pixel-boy |Creative Common Zero(CCO) |https://pixel-boy.itch.io/ninja-adventure-asset-pack | Sprites|
 
 ### 10.2 Audio Assets
 | Asset Name | Type | Creator / Source | Licence | URL | Used For |
 |---|---|---|---|---|---|
-| | | | | https://dmochas-assets.itch.io/dmochas-bleeps-pack|Dialogue |
-| | | | |https://sfxmint.com/sounds/ambience-room-tone-03 |Background Music |
-| | | | | https://sfxmint.com/sounds/door-open-01|Door Opening |
-| | | | | https://sfxmint.com/sounds/footsteps-wood-25|Footsteps |
-| | | | |https://opengameart.org/content/horror-atmosphere|Horror Atmosphere |
+| Text/Dialogue Bleeps Pack|.ogg | dmochas|Creative Commons Attribution 4.0 International License | https://dmochas-assets.itch.io/dmochas-bleeps-pack|Dialogue |
+|Quiet Interior Room Tone 03 |.mp3 |SFX Mint |CC0 |https://sfxmint.com/sounds/ambience-room-tone-03 |Background Music |
+|Light Interior Door Opening 01| .mp3 | SFX Mint|CC0| https://sfxmint.com/sounds/door-open-01|Door Opening |
+|Slow Walking Footsteps On Wooden Floor 25 |.mp3 |SFX Mint |CC0 | https://sfxmint.com/sounds/footsteps-wood-25|Footsteps |
+| Horror Atmosphere|.ogg |SubspaceAudio |CC0 |https://opengameart.org/content/horror-atmosphere|Horror Atmosphere |
 
 ### 10.3 Scripts & Code Snippets
-| Script / Snippet | Source | Licence | URL | Used For | Changes Made |
-|---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
+None
 
 ### 10.4 Unity Packages & Plugins
-| Package Name | Version | Source | Licence | URL | Purpose |
-|---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+None
 
 ### 10.5 Fonts
-| Font Name | Creator / Source | Licence | URL |
-|---|---|---|---|
-| | | | |
-| | | | |
+None
 
 ---
 
