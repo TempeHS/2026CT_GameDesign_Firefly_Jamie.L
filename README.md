@@ -262,7 +262,7 @@ No levels
 | 7 | PERFECT Tilemap Sorting Layers - Top Down Unity 2D #3|Game Code Library |https://www.youtube.com/watch?v=UId0mwanBZg&t=138s |I used it as a starting guide  |Amount of tilemap sorting layers |
 | 8 |Enter and Exit Buildings in ONE Scene! - Top Down Unity 2D #30| Game Code Library|https://www.youtube.com/watch?v=4D9utRDwH90 | None|Nothing. Dead idea |
  |9|Player Tracking and Camera Bounds - Top Down Unity 2D #4 | Game Code Library|https://www.youtube.com/watch?v=kV9rVinFyAk |Camera tracking |I added camera locks to the sides of the game so the camera wouldn't fly off |
- |10|Player Movement with Unity Input System - Top Down Unity 2D #1|Game Code Library https://www.youtube.com/watch?v=DQY62meLVCk&t=323s| Player movement|None |
+ |10|Player Movement with Unity Input System - Top Down Unity 2D #1|Game Code Library| https://www.youtube.com/watch?v=DQY62meLVCk&t=323s| Player movement|None |
 
 ---
 
