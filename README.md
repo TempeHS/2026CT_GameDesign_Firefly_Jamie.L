@@ -47,7 +47,7 @@ The win condition is if you complete the storyline and find out the secrets of t
 |---|---|
 | WindowsX64 | |
 | 1920x1080 | |
-| Build Type | |
+| Build Type | Release|
 
 ---
 
@@ -57,10 +57,10 @@ The win condition is if you complete the storyline and find out the secrets of t
 
 | Field | Detail |
 |---|---|
-| **My documentation video** | |
-| **https://youtu.be/jBVQdJGBPuA** | |
-| **4m 50s** | |
-| **My documentation video for my computor technology game for 2026.** | |
+| **My documentation video** | 
+| **https://youtu.be/jBVQdJGBPuA** | 
+| **4m 50s** | 
+| **My documentation video for my computor technology game for 2026.** | 
 
 Apologies for horrible video quality. Idk what went wrong.
 
@@ -253,9 +253,7 @@ No levels
 
 | # | Title | Author / Creator | URL / Source | What You Used It For | What You Changed / Adapted |
 |---|---|---|---|---|---|
-| 1 |
-Start Menu - 2D Platformer Unity #28 |Game Code Library |https://www.youtube.com/watch?v=paaBTt5GcMU |Base of my start menu |Changed the artwork and titling of my game |
-| 2 |Drag and Drop Inventory UI - Top Down Unity 2D #8
+| 1 |Start Menu - 2D Platformer Unity #28 |Game Code Library |https://www.youtube.com/watch?v=paaBTt5GcMU |Base of my start menu |Changed the artwork and titling of my game | 2 |Drag and Drop Inventory UI - Top Down Unity 2D #8
  |Game Code Library |https://www.youtube.com/watch?v=wlBJ0yZOYfM |My inventory slots |Changed the formatting, amount of slots and parts of the code |
 | 3 |Menu UI with Tab Switching - Top Down Unity 2D #6
  | Game Code Library|https://www.youtube.com/watch?v=liba3xGI4gM&t=762s |Baseline for my menu |Assisted me in making my menu but did change most of the code |
