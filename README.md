@@ -311,11 +311,11 @@ None
 
 | # | Challenge Encountered | How It Was Solved |
 |---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 |Deleted Entire animation folder |Rolled back to an old git commit |
+| 2 |Unity Code was broken |Troubleshooted using the console to figure out why my triggers werent' working |
+| 3 | Inventory slots were broken|Adjusted grids per column instead of row to make formatting easier then tried multiple times to find the correct amount to fit into the inventory cleanly |
+| 4 | SFX overlapping with eachother| I added seperate audio sources for each SFX instead of using one for all of them|
+| 5 |Lighting was overlapping |Adjusted opacity for each lighting source to make sure they didn't overlap |
 
 ---
 
@@ -331,8 +331,8 @@ None
 |---|---|
 | **Branch Name** | `main` |
 | **Purpose** | Stable, releasable version of the game |
-| **Merged From** | |
-| **Final Commit** | |
+| **Merged From** | none|
+| **Final Commit** |24th septemeber |
 
 ---
 
@@ -340,155 +340,49 @@ None
 
 | Field | Detail |
 |---|---|
-| **Branch Name** | |
-| **Feature Developed** | |
-| **Merged Into** | |
-| **Date Started** | |
-| **Date Merged** | |
+| **Branch Name** |animations |
+| **Feature Developed** |animations |
+| **Merged Into** | main|
+| **Date Started** | May14th 2026|
+| **Date Merged** | June17th 2026|
 
 #### What Was Built
-<!-- Describe what this branch added or changed -->
+Worked on my animations and movement for my player character.
 
 #### Key Commits
 | Commit Message | What Changed |
 |---|---|
-| | |
-| | |
-| | |
+| WIP:animations and transititons|fixing my player idle animations, as they didn't work before |
+|Finished camera locking |Finished player camera locking and made sure the camera couldn't fly off the map |
+| WIP:movement|Working on movement making sure it looked smooth and worked properly |
 
 #### Problems Encountered & Resolved
-| Problem | Resolution |
-|---|---|
-| | |
-| | |
+None
 
 #### Screenshot / Evidence
-> `![Feature Name](./docs/screenshots/branch_feature_name.png)`
-
----
+![walking animation](./screenshots/Screenshot 2026-09-23 215146.png)
 
 ### Branch 3 — `feature/`
 
 | Field | Detail |
 |---|---|
-| **Branch Name** | |
-| **Feature Developed** | |
-| **Merged Into** | |
-| **Date Started** | |
-| **Date Merged** | |
+| **Branch Name** |stuff |
+| **Feature Developed** | none|
+| **Merged Into** |main |
+| **Date Started** | 26th August 2026|
+| **Date Merged** |26 August 2026 |
 
 #### What Was Built
 
-
+Used to remerge into main. Main was broken and I needed to fix it. I had to remerge into main to fix the issues with the game.
 #### Key Commits
-| Commit Message | What Changed |
-|---|---|
-| | |
-| | |
-| | |
+None
 
 #### Problems Encountered & Resolved
-| Problem | Resolution |
-|---|---|
-| | |
-| | |
+None
 
 #### Screenshot / Evidence
-> `![Feature Name](./docs/screenshots/branch_feature_name.png)`
-
----
-
-### Branch 4 — `feature/`
-
-| Field | Detail |
-|---|---|
-| **Branch Name** | |
-| **Feature Developed** | |
-| **Merged Into** | |
-| **Date Started** | |
-| **Date Merged** | |
-
-#### What Was Built
-
-
-#### Key Commits
-| Commit Message | What Changed |
-|---|---|
-| | |
-| | |
-| | |
-
-#### Problems Encountered & Resolved
-| Problem | Resolution |
-|---|---|
-| | |
-| | |
-
-#### Screenshot / Evidence
-> `![Feature Name](./docs/screenshots/branch_feature_name.png)`
-
----
-
-### Branch 5 — `feature/`
-
-| Field | Detail |
-|---|---|
-| **Branch Name** | |
-| **Feature Developed** | |
-| **Merged Into** | |
-| **Date Started** | |
-| **Date Merged** | |
-
-#### What Was Built
-
-
-#### Key Commits
-| Commit Message | What Changed |
-|---|---|
-| | |
-| | |
-| | |
-
-#### Problems Encountered & Resolved
-| Problem | Resolution |
-|---|---|
-| | |
-| | |
-
-#### Screenshot / Evidence
-> `![Feature Name](./docs/screenshots/branch_feature_name.png)`
-
----
-
-### Branch 6 — `feature/`
-
-| Field | Detail |
-|---|---|
-| **Branch Name** | |
-| **Feature Developed** | |
-| **Merged Into** | |
-| **Date Started** | |
-| **Date Merged** | |
-
-#### What Was Built
-
-
-#### Key Commits
-| Commit Message | What Changed |
-|---|---|
-| | |
-| | |
-| | |
-
-#### Problems Encountered & Resolved
-| Problem | Resolution |
-|---|---|
-| | |
-| | |
-
-#### Screenshot / Evidence
-> `![Feature Name](./docs/screenshots/branch_feature_name.png)`
-
+None
 ---
 
 ### Branch Development Overview
@@ -498,11 +392,9 @@ None
 | Branch Name | Feature | Date Started | Date Merged | Status |
 |---|---|---|---|---|
 | `main` | Stable release | | | |
-| `feature/` | | | | |
-| `feature/` | | | | |
-| `feature/` | | | | |
-| `feature/` | | | | |
-| `feature/` | | | | |
+| `feature/`animations | animations|May14th 2026|June17th 2026 |Finished |
+| `feature/`stuff |nothing |26th august |26th august | Finished|
+
 
 ---
 
